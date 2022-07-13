@@ -1,6 +1,6 @@
 #include <iostream>
 #include <vector>
-
+#define ll long long
 int get_fibonacci_last_digit_naive(int n) {
     if (n == 0)
         return 0;

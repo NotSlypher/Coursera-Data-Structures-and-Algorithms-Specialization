@@ -11,10 +11,22 @@ struct Segment {
 
 vector<int> optimal_points(vector<Segment> &segments) {
   vector<int> points;
+  std::sort(segments.begin(), segments.end(), []( Segment a,Segment b) {return a.end < b.end; });
+  vector<bool> covered(segments.size(), false);
   //write your code here
+  int point = 0, j = 0;
   for (size_t i = 0; i < segments.size(); ++i) {
-    points.push_back(segments[i].start);
-    points.push_back(segments[i].end);
+    if(!covered[i])
+    {
+        point = segments[i].end;
+        points.push_back(point);
+        covered[i] = true;
+        j = i + 1;
+        while (j < segments.size() and (segments[j].start <= point and segments[j].end >= point)) {
+            covered[j] = true;
+            j++;
+        }
+    }
   }
   return points;
 }
