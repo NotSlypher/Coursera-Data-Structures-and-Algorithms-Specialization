@@ -5,7 +5,6 @@
 using std::vector;
 
 int get_majority_element(vector<int> &a, int left, int right) {
-    right = right - 1;
     int m;
     if (a[(left + right) / 2] == a[left])
         return 1;
