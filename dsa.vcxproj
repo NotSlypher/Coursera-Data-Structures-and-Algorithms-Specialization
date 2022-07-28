@@ -73,7 +73,7 @@
     <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\1_binary_search\binary_search.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\2_binary_search_with_duplicates\binary_search.cpp">
+    <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\2_binary_search_with_duplicates\binary_search_.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\3_majority_element\majority_element.cpp">
@@ -92,7 +92,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ALgorithmic toolkit\week5_dynamic_programming1\1_money_change_again\change_dp.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="ALgorithmic toolkit\week5_dynamic_programming1\2_primitive_calculator\primitive_calculator.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>

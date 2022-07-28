@@ -24,7 +24,7 @@ int first_occ(const vector<int> &a, int x)
 {
     int l = binary_search(a, x);
     if (l != -1) {
-        for (int i = l; i > 0 && a[i] == x; --i) {
+        for (int i = l; i >= 0 && a[i] == x; --i) {
             l = i;
         }
     }

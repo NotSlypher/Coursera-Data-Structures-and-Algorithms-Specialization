@@ -69,7 +69,7 @@
     <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\1_binary_search\binary_search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\2_binary_search_with_duplicates\binary_search.cpp">
+    <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\2_binary_search_with_duplicates\binary_search_.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ALgorithmic toolkit\week4_divide_and_conquer\3_majority_element\majority_element.cpp">
