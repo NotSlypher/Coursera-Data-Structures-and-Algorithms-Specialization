@@ -111,5 +111,62 @@
     <ClCompile Include="ALgorithmic toolkit\week6_dynamic_programming2\3_maximum_value_of_an_arithmetic_expression\placing_parentheses.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="data structure\week1_basic_data_structures\1_brackets_in_code\check_brackets.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week1_basic_data_structures\2_tree_height\tree-height.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week1_basic_data_structures\3_network_simulation\process_packages.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week1_basic_data_structures\4_stack_with_max\stack_with_max_naive.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week1_basic_data_structures\5_max_sliding_window\max_sliding_window.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week2_priority_queues_and_disjoint_sets\1_make_heap\build_heap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week2_priority_queues_and_disjoint_sets\2_job_queue\job_queue.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week2_priority_queues_and_disjoint_sets\3_merging_tables\merging_tables.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week3_hash_tables\1_phone_book\phone_book.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week3_hash_tables\2_hash_chains\hash_chains.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week3_hash_tables\3_hash_substring\hash_substring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week3_hash_tables\4_substring_equality\substring_equality.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week3_hash_tables\5_longest_common_substring\common_substring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week3_hash_tables\6_matching_with_mismatches\matching_with_mismatches.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week4_binary_search_trees\1_tree_traversals\tree-orders.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week4_binary_search_trees\2_is_bst\is_bst.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week4_binary_search_trees\3_is_bst_advanced\is_bst_hard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week4_binary_search_trees\4_set_range_sum\set_range_sum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="data structure\week4_binary_search_trees\5_rope\rope.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

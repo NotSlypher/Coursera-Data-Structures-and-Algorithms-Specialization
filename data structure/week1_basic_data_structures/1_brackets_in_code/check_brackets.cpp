@@ -29,17 +29,37 @@ int main() {
     std::stack <Bracket> opening_brackets_stack;
     for (int position = 0; position < text.length(); ++position) {
         char next = text[position];
+    	Bracket b(next, position);
 
         if (next == '(' || next == '[' || next == '{') {
             // Process opening bracket, write your code here
+            opening_brackets_stack.push(b);
         }
 
         if (next == ')' || next == ']' || next == '}') {
             // Process closing bracket, write your code here
+            if (opening_brackets_stack.empty())
+            {
+	            std::cout << position + 1 << std::endl;
+                return 0;
+            }
+            else
+            {
+	            if (opening_brackets_stack.top().Matchc(b.type))
+	            {
+                    opening_brackets_stack.pop();
+	            }
+	            else
+	            {
+                    std::cout << position + 1 << std::endl;
+                    return 0;
+	            }
+            }
         }
     }
 
     // Printing answer, write your code here
+    std::cout << (opening_brackets_stack.empty() ? "Success" : std::to_string(opening_brackets_stack.top().position + 1));
 
     return 0;
 }
