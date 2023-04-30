@@ -1,6 +1,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.*;
 
 class Request {
     public Request(int arrival_time, int process_time) {
@@ -24,17 +24,33 @@ class Response {
 
 class Buffer {
     public Buffer(int size) {
-        this.size_ = size;
-        this.finish_time_ = new ArrayList<Integer>();
+        this.size = size;
+        this.queue = new LinkedList<Integer>();
+        this.finishTime = 0;
     }
 
     public Response Process(Request request) {
-        // write your code here
-        return new Response(false, -1);
+        while (queue.size() > 0 && queue.peekFirst() <= request.arrival_time) {
+            queue.removeFirst();
+        }
+        if (queue.size() >= size) { // buffer full
+            return new Response(true, -1);
+        }
+        if (queue.size() <= 0) { // empty buffer
+            finishTime += request.process_time;
+            queue.add(finishTime);
+            return new Response(false, request.arrival_time);
+        }
+        finishTime = queue.peekLast();
+        Response r = new Response(false, finishTime);
+        finishTime += request.process_time;
+        queue.addLast(finishTime);
+        return r;
     }
 
-    private int size_;
-    private ArrayList<Integer> finish_time_;
+    private int size;
+    private Deque<Integer> queue;
+    private int finishTime;
 }
 
 class process_packages {
