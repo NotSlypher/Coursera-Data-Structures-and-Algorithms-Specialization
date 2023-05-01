@@ -1,36 +1,60 @@
 #include <iostream>
 #include <vector>
+#include <deque>
 
-using std::cin;
-using std::cout;
 using std::vector;
-using std::max;
+using std::deque;
 
-void max_sliding_window_naive(vector<int> const & A, int w) {
-    for (size_t i = 0; i < A.size() - w + 1; ++i) {
-        int window_max = A.at(i);
-        for (size_t j = i + 1; j < i + w; ++j)
-            window_max = max(window_max, A.at(j));
+class solution
+{
+  public:
+    vector<int> maxSlidingWindow(const vector<int> & nums, int k) {
+        vector<int> result;
+        deque<int> indx;
+        int id = 0;
+        indx.push_front(id);
+        id++;
+        for (;id < k;id++) {
+            if (nums[id] >= nums[indx.front()])
+                indx.push_front(id);
+            else {
+                while(nums[indx.back()] < nums[id])
+                    indx.pop_back();
+                indx.push_back(id);
+            }
+        }
+        result.push_back(nums[indx.front()]);
 
-        cout << window_max << " ";
+        while ((size_t)id < nums.size()) {
+            while (id-indx.front() >= 3)
+                indx.pop_front();
+            if (nums[id] >= nums[indx.front()])
+                indx.push_front(id);
+            else {
+                while(nums[indx.back()] < nums[id])
+                    indx.pop_back();
+                indx.push_back(id);
+            }
+            id++;
+            result.push_back(nums[indx.front()]);
+        }
+
+        return result;
     }
-
-    return;
-}
-
+};
 
 int main() {
-    int n = 0;
-    cin >> n;
+    // vector<int> nums{1,3,-1,-3,5,3,6,7};
+    // vector<int> nums{1,2,3,1,4,5,2,3,6};
+    // vector<int> nums{8,5,10,7,9,4,15,12,90,13};
+    vector<int> nums{12, 1, 78, 90, 57, 89, 56};
+    int windowsize = 3;
 
-    vector<int> A(n);
-    for (size_t i = 0; i < n; ++i)
-        cin >> A.at(i);
+    solution soln;
+    auto res = soln.maxSlidingWindow(nums, windowsize);
 
-    int w = 0;
-    cin >> w;
-
-    max_sliding_window_naive(A, w);
-
-    return 0;
+    std::cout << "The maximum sliding window is:\n";
+    for (auto i : res)
+        std::cout << i << " ";
+    std::cout << std::endl;
 }

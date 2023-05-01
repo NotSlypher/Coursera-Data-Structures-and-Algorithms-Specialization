@@ -20,10 +20,39 @@ public class StackWithMax {
         }
     }
 
+    public class StackWithMx {
+        private Stack<Integer> data;
+        private Stack<Integer> max;
+
+        public StackWithMx() {
+            data = new Stack<Integer>();
+            max = new Stack<Integer>();
+        }
+
+        public void push(int x) {
+            data.push(x);
+            if (max.empty() || x >= max())
+                max.push(x);
+        }
+
+        public int pop() {
+            if (data.peek() == max())
+                max.pop();
+            return data.pop();
+        }
+
+        public int peek() {
+            return data.peek();
+        }
+
+        public int max() {
+            return max.peek();
+        }
+    }
     public void solve() throws IOException {
         FastScanner scanner = new FastScanner();
         int queries = scanner.nextInt();
-        Stack<Integer> stack = new Stack<Integer>();
+        StackWithMx stack = new StackWithMx();
 
         for (int qi = 0; qi < queries; ++qi) {
             String operation = scanner.next();
@@ -33,7 +62,7 @@ public class StackWithMax {
             } else if ("pop".equals(operation)) {
                 stack.pop();
             } else if ("max".equals(operation)) {
-                System.out.println(Collections.max(stack));
+                System.out.println(stack.max());
             }
         }
     }
